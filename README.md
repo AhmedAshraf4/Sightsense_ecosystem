@@ -1,4 +1,4 @@
-# 🧠 SightSense — Technical Documentation (README)
+# 🧠 SightSense — Technical Documentation
 
 ## Overview
 
