@@ -4,29 +4,25 @@
 
 ```mermaid
 flowchart TD
-  %% Sight Sense - Data Flow
-
-  U[User / Environment] -->|Surroundings| CAM[Camera]
+  U[User and Environment] -->|Surroundings| CAM[Camera]
   U -->|Near obstacles| US[Ultrasonic Sensor]
 
-  CAM -->|Frames| OD[Object Detection\n(YOLOv8)]
-  OD -->|Detected objects + bounding boxes| DE[Depth Estimation / Distance Model]
-  US -->|Distance readings (backup)| DE
+  CAM -->|Frames| OD[Object Detection (YOLOv8)]
+  OD -->|Objects and bounding boxes| DE[Depth Estimation and Distance]
+  US -->|Distance readings as backup| DE
 
-  DE -->|Object + distance + risk level| DEC[Decision Logic\n(Thresholds / Priority)]
+  DE -->|Object, distance, risk| DEC[Decision Logic]
+  DEC -->|Text alerts| TTS[Text to Speech]
+  TTS -->|Audio output| EAR[Bluetooth Earbuds]
 
-  DEC -->|Text message| TTS[Text-to-Speech]
-  TTS -->|Audio alerts| EAR[Bluetooth Earbuds / Audio Output]
-
-  DEC -->|Status + location request| APP[Mobile App]
+  DEC -->|Status and app updates| APP[Mobile App]
   GPS[Phone GPS] -->|Coordinates| APP
-  APP -->|Navigation + settings| DEC
+  APP -->|Settings and navigation input| DEC
 
-  FR[Face Recognition] <-->|Frames| CAM
-  FR -->|Identity| DEC
+  CAM -->|Frames| FR[Face Recognition]
+  FR -->|Identity result| DEC
 
-  APP -->|Location sharing (optional)| REL[Family / Relatives View]
-
+  APP -->|Optional location sharing| REL[Family or Relatives]
 ```
 ## Overview
 
