@@ -1,5 +1,33 @@
 # 🧠 SightSense — Technical Documentation
 
+## Data Flow Diagram (Mermaid)
+
+```mermaid
+flowchart TD
+  %% Sight Sense - Data Flow
+
+  U[User / Environment] -->|Surroundings| CAM[Camera]
+  U -->|Near obstacles| US[Ultrasonic Sensor]
+
+  CAM -->|Frames| OD[Object Detection\n(YOLOv8)]
+  OD -->|Detected objects + bounding boxes| DE[Depth Estimation / Distance Model]
+  US -->|Distance readings (backup)| DE
+
+  DE -->|Object + distance + risk level| DEC[Decision Logic\n(Thresholds / Priority)]
+
+  DEC -->|Text message| TTS[Text-to-Speech]
+  TTS -->|Audio alerts| EAR[Bluetooth Earbuds / Audio Output]
+
+  DEC -->|Status + location request| APP[Mobile App]
+  GPS[Phone GPS] -->|Coordinates| APP
+  APP -->|Navigation + settings| DEC
+
+  FR[Face Recognition] <-->|Frames| CAM
+  FR -->|Identity| DEC
+
+  APP -->|Location sharing (optional)| REL[Family / Relatives View]
+
+```
 ## Overview
 
 SightSense is an **embedded AI assistive system** designed to help visually impaired users perceive their surroundings through **real-time hazard detection, distance estimation, and face recognition**, running directly on a **Raspberry Pi**.  
