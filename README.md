@@ -54,22 +54,44 @@ flowchart TD
 
 ---
 
-## Components (Click-to-jump)
+## Table of Contents
 
-- [User and Environment](#User-and-Environment)
-- [Ultrasonic Sensor](#ultrasonic-sensor)
-- [Object Detection (YOLOv8)](#object-detection-yolov8)
-- [Distance Estimation](#distance-estimation)
-- [Face Recognition](#face-recognition)
-- [Decision Logic](#decision-logic)
-- [Text to Speech](#text-to-speech)
-- [Headset](#headset)
-- [Phone GPS](#phone-gps)
-- [Mobile App](#mobile-app)
-- [Location Sharing](#location-sharing)
-- [Family or Relatives](#family-or-relatives)
-- [Navigation Voice Instructions](#navigation-voice-instructions)
-- [Promo Website](#promo-website)
+- [1) Embedded Systems Integration](#1-embedded-systems-integration)
+  - [1) Engineering Plan (Phased Approach)](#1-engineering-plan-phased-approach)
+  - [2) Mechanical Design (AutoCAD + 3D Printing Workflow)](#2-mechanical-design-autocad--3d-printing-workflow)
+  - [3) Platform & OS Setup (Embedded Linux)](#3-platform--os-setup-embedded-linux)
+  - [4) Camera Selection (Wide FOV + Autofocus)](#4-camera-selection-wide-fov--autofocus)
+  - [5) Model Deployment on Device (YOLOv8n → TFLite)](#5-model-deployment-on-device-yolov8n--tflite)
+  - [6) Distance Estimation (Latency Challenge → Coral TPU Fix)](#6-distance-estimation-latency-challenge--coral-tpu-fix)
+  - [7) Safety Fallback (Ultrasonic Sensor)](#7-safety-fallback-ultrasonic-sensor)
+  - [8) Audio Feedback (Text-to-Speech + Bluetooth on Linux)](#8-audio-feedback-text-to-speech--bluetooth-on-linux)
+  - [9) Startup & Deployment (Autostart on Boot)](#9-startup--deployment-autostart-on-boot)
+
+- [2) AI and Machine Learning](#2-ai-and-machine-learning)
+  - [1) Object Detection (YOLOv8)](#1-object-detection-yolov8)
+  - [(I) V1 Classes (Initial Hazard Set)](#i-v1-classes-initial-hazard-set)
+  - [(II) Dataset Version II (V2) — Refinement After V1 Failures](#ii-dataset-version-ii-v2--refinement-after-v1-failures)
+  - [(III) Dataset Version III (V3) — Final Dataset + Augmentation + `person` Class](#iii-dataset-version-iii-v3--final-dataset--augmentation--person-class)
+  - [2) Face Recognition](#2-face-recognition)
+  - [3) Depth Estimation Module (Depth-Anything)](#3-depth-estimation-module-depth-anything)
+  - [4) Text-to-Speech Module (TTS)](#4-text-to-speech-module-tts)
+
+- [3) Mobile Development](#3-mobile-development)
+  - [1) App Bootstrap & Routing](#1-app-bootstrap--routing)
+  - [2) Backend (Firebase) — Core of the Mobile App](#2-backend-firebase--core-of-the-mobile-app)
+  - [3) Authentication (Firebase Auth)](#3-authentication-firebase-auth)
+  - [4) Firestore Data Model (What We Store)](#4-firestore-data-model-what-we-store)
+  - [5) Backend Storage (AWS) — User Media Uploads](#5-backend-storage-aws--user-media-uploads)
+  - [5) Navigation & Maps (GPS + Routing)](#5-navigation--maps-gps--routing)
+  - [6) Voice Features (Hands-Free Navigation)](#6-voice-features-hands-free-navigation)
+  - [7) Settings, Support, Contact](#7-settings-support-contact)
+
+- [4) Web Development](#4-web-development)
+  - [1) Pages Included](#1-pages-included)
+  - [2) Shared Navigation & Interactions (`script.js`)](#2-shared-navigation--interactions-scriptjs)
+  - [3) Styling](#3-styling)
+  - [4) Assets](#4-assets)
+
 
 ---
 
@@ -302,9 +324,6 @@ To run the system automatically after boot, we used **crontab** for autostart.
   - automatic restart on crash
   - dependency ordering (camera/Bluetooth/audio readiness)
 
----
-
-## 10) Optional Software Diagram (Recommended)
 
 ```mermaid
 flowchart LR
