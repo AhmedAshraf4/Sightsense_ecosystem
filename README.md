@@ -91,6 +91,8 @@ flowchart TD
   - [2) Shared Navigation & Interactions (`script.js`)](#2-shared-navigation--interactions-scriptjs)
   - [3) Styling](#3-styling)
   - [4) Assets](#4-assets)
+ 
+- [5) Prototype Metrics](#5-prototype-metrics)
 
 
 ---
@@ -1403,3 +1405,57 @@ Pages reference local assets under `assets/` (logo, icons, images, gifs). Exampl
 
 ---
 
+
+# (5) Prototype Metrics
+
+
+## A) Physical Metrics
+
+| Metric | Weight | Notes |
+|---|---:|---|
+| Glasses + mounted electronics (total) | 320 g | Total wearable weight including camera + sensor + mounts |
+| 3D-printed housing only | 380 g |  |
+
+
+## B) Runtime Performance
+
+| Metric | Value | Notes |
+|---|---:|---|
+| Object detection inference (YOLOv8n TFLite) | ~30–80 ms/frame | Depends on input resolution + CPU load |
+| Depth/distance estimation latency (Pi + Coral TPU) | **~400 ms** | After Coral acceleration (from ~30–40 s CPU-only) |
+| End-to-end “detect → speak” response | ~0.6–0.7 s | Includes inference + filtering + TTS queue + audio output |
+| Safety fallback response (ultrasonic) | <80 ms typical | Fast last-line defense for close obstacles |
+
+## C) Power & Battery
+
+| Metric | Value | Notes |
+|---|---:|---|
+| Input supply | 5V / ≥2.4A | Minimum stable supply for Pi + peripherals |
+| Battery capacity used | 20,000 mAh | Selected for portability + acceptable runtime |
+| Expected runtime | ~4–5 hours | Varies with workload + battery quality |
+
+## D) Thermal Behavior
+
+| Metric | Value | Notes |
+|---|---:|---|
+| Typical enclosure temperature | ~40–55°C | Should remain below discomfort thresholds with airflow |
+| Peak temperature (stress) | ~60–65°C | During continuous compute or poor ventilation |
+| Cooling strategy | Passive airflow + placement | Future: heatsinks/fan + vent redesign |
+
+## E) Reliability / Usability Indicators
+
+| Metric | Value | Notes |
+|---|---:|---|
+| Bluetooth audio stability | Good (within 5–10 m) | |
+| Startup time (boot → ready) | ~25–45 s | Current cron-based start; future systems can reduce variance |
+
+
+## What We Still Need to Measure (Final Validation Checklist)
+
+- Total weight with the final battery placement
+- Continuous runtime under real walking conditions
+- Temperature after 30–60 minutes continuous use
+- End-to-end reaction time in crowded outdoor environments
+- False positives / missed hazards rate during field testing
+
+---
