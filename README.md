@@ -1449,13 +1449,4 @@ Pages reference local assets under `assets/` (logo, icons, images, gifs). Exampl
 | Bluetooth audio stability | Good (within 5–10 m) | |
 | Startup time (boot → ready) | ~25–45 s | Current cron-based start; future systems can reduce variance |
 
-
-## What We Still Need to Measure (Final Validation Checklist)
-
-- Total weight with the final battery placement
-- Continuous runtime under real walking conditions
-- Temperature after 30–60 minutes continuous use
-- End-to-end reaction time in crowded outdoor environments
-- False positives / missed hazards rate during field testing
-
 ---
