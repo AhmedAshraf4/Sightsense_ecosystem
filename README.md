@@ -69,9 +69,9 @@ flowchart TD
 
 - [2) AI and Machine Learning](#2-ai-and-machine-learning)
   - [1) Object Detection (YOLOv8)](#1-object-detection-yolov8)
-  - [(I) V1 Classes (Initial Hazard Set)](#i-v1-classes-initial-hazard-set)
-  - [(II) Dataset Version II (V2) — Refinement After V1 Failures](#ii-dataset-version-ii-v2--refinement-after-v1-failures)
-  - [(III) Dataset Version III (V3) — Final Dataset + Augmentation + `person` Class](#iii-dataset-version-iii-v3--final-dataset--augmentation--person-class)
+    - [(I) V1 Classes (Initial Hazard Set)](#i-v1-classes-initial-hazard-set)
+    - [(II) Dataset Version II (V2) — Refinement After V1 Failures](#ii-dataset-version-ii-v2--refinement-after-v1-failures)
+    - [(III) Dataset Version III (V3) — Final Dataset + Augmentation + `person` Class](#iii-dataset-version-iii-v3--final-dataset--augmentation--person-class)
   - [2) Face Recognition](#2-face-recognition)
   - [3) Depth Estimation Module (Depth-Anything)](#3-depth-estimation-module-depth-anything)
   - [4) Text-to-Speech Module (TTS)](#4-text-to-speech-module-tts)
