@@ -1,0 +1,34 @@
+[1]https://www.researchgate.net/publication/304290631_Object_detection_using_Google_Glass 
+[2]https://www.irjmets.com/uploadedfiles/paper/issue_5_may_2022/24682/final/fin_irjmets1654067534.pdf 
+[3]https://universe.roboflow.com/roboflow-100/vehicles-q0x2v
+[4]https://universe.roboflow.com/sahrdaya/vehicle-detection-pxftz             
+[5]https://universe.roboflow.com/viet/vehiclesxqno3
+[6] https://universe.roboflow.com/roboflow-100/road-signs-6ih4y
+[7] https://universe.roboflow.com/sit-asmsw/road-sign-detection-in-realtime
+[8] https://universe.roboflow.com/jeong-yeonsu/streetlamppole_object_detect
+[9] https://universe.roboflow.com/velotech/velotech
+[10] https://universe.roboflow.com/garage-dkgp8/crosswalk-1zsz6/dataset/1/images
+[11] https://universe.roboflow.com/crosswalk-fx95c/crosswalk-bhgbx
+[12] https://universe.roboflow.com/tcc-xn3st/yolov8-crosswalk-detection/dataset/1
+[13] https://github.com/rodrigoberriel/streetview-crosswalk-classification
+[14] https://universe.roboflow.com/train-gate/alltraingate/dataset/2/images  
+[15] https://universe.roboflow.com/inhholland/level-crossing-ikzda/dataset/8
+[16] https://universe.roboflow.com/tip-bemch/vi-glass-vemch/dataset/2/images
+[17]https://universe.roboflow.com/shubham-singh-ygock/animal-k6p76/dataset/1/images/?split=train&numImages=60
+[18] https://universe.roboflow.com/group5-hw3/group-5-cat-detector
+[19] https://universe.roboflow.com/itmo-ognxn/russian-trash-can
+[20] https://universe.roboflow.com/four-yylyu/fh-3x3
+[21] https://universe.roboflow.com/odedm/bike-lane-detection
+[22] https://universe.roboflow.com/objectdetectionm/obj_det-nl2bf
+[23] https://universe.roboflow.com/pooja-yjowt/pothole_detection-gpmaa
+[24] https://universe.roboflow.com/vit-0mr4g/auto-rickshaw-oobkc
+[25] https://universe.roboflow.com/school-4awgw/stair-gaptw
+[26] https://universe.roboflow.com/thesis-lnztw/thesis-p4gur
+[27] https://universe.roboflow.com/stairs-blind/stairs_detection-9av4i/dataset/2/images
+[28] https://universe.roboflow.com/alakarthika-ulaganathan-e67oj/stairs-0k0qs/dataset/1/images 
+[29] https://universe.roboflow.com/ono-gedd7/pedestrian-traffic-light-puf4a/dataset/4/images
+[30] https://universe.roboflow.com/s-z-drgsb/aug-t3b
+[31] https://universe.roboflow.com/sachin-kz1f8/edge_barricade_detection/dataset/1
+[32] https://universe.roboflow.com/wisconsin-autonomous-sign-classifier/type-3-barricade-annotation/dataset/1
+[33] https://universe.roboflow.com/school-gsvjb/123-b49be/dataset/1/images
+[34] https://universe.roboflow.com/utem/barrier-qj7tx/dataset/2/images
